@@ -11,5 +11,6 @@ for(let i = 0; i < arry.length; i++) {
 
 console.log(newArry);
 
+// 上と同じ条件(配列の要素を2倍した値が50以上のもので新しい配列を作る)
 const newArry2 = arry.map(val => val * 2).filter(val => val > 50);
 console.log(newArry2)

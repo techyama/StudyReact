@@ -12,6 +12,7 @@
 const arr = ["Japan", "Tokyo", "Shinjuku"];
 const objAddress = { country: "Japan", state: "Tokyo", city: "Shinjuku" };
 
+// 配列の要素をそれぞれ変数に代入できる
 const fnArr = ([ country, state, city ]) => {
   console.log("---配列---");
   console.log(`country: ${country}`);
@@ -19,6 +20,7 @@ const fnArr = ([ country, state, city ]) => {
   console.log(`city: ${city}`);
 };
 
+// オブジェクトのキー値から値を取得できる
 const fnObj = ({ country, state }) => {
   console.log("---オブジェクト---");
   console.log(`country: ${country}`);
@@ -26,5 +28,5 @@ const fnObj = ({ country, state }) => {
   // console.log(`city: ${city}`);
 };
 
-// fnArr(arr);
+fnArr(arr);
 fnObj(objAddress);
