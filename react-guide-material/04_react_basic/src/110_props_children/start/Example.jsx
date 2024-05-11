@@ -9,7 +9,10 @@ const profile = [
 const Example = () => {
   return (
     <div>
-      <Container title="Childrenとは？" />
+      <Container title="Childrenとは？">
+        <Profile {...profile[0]} />
+        <Profile {...profile[1]} />
+      </Container>
     </div>
   );
 };

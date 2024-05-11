@@ -10,7 +10,18 @@
     <script type="text/babel">
       const appEl = document.querySelector("#app");
       const root = ReactDOM.createRoot(appEl);
-      root.render(<h1>こんにちは</h1>);
+      // 必ず先頭は大文字である必要がある(babelが読み込むのは大文字のため)
+      // function Example() {
+      //   return <h1>Hello Components</h1>;
+      // }
+
+      // アロー関数
+      const Example = () => (
+        <div>
+          <h1>Hello Components</h1>
+        </div>
+      );
+      root.render(<Example />);
     </script>
   </body>
 </html>
