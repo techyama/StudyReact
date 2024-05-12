@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../../../../libs/react.development.js"></script>
+    <script src="../../../../libs/react-dom.development.js"></script>
+    <script src="../../../../libs/babel-standalone.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/babel">
+      const appEl = document.querySelector("#app");
+      const root = ReactDOM.createRoot(appEl);
+      // 必ず先頭は大文字である必要がある(babelが読み込むのは大文字のため)
+      // function Example() {
+      //   return <h1>Hello Components</h1>;
+      // }
+
+      // アロー関数
+      const Example = () => (
+        <div>
+          <h1>Hello Components</h1>
+        </div>
+      );
+      root.render(<Example />);
+    </script>
+  </body>
+</html>
