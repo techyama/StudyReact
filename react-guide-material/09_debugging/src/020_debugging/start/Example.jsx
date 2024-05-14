@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 const Child = (countNum) => {
+  debugger
   return <p>現在のカウント数: {countNum.val}</p>
 }
 
