@@ -1,5 +1,18 @@
+import { useEffect } from "react";
+import axios from "axios";
+
 const Example = () => {
-  return <></>;
+  useEffect(() => {
+    const getUser = async () => {
+      const res = await axios.get('http://localhost:3003/user');
+      console.log(res.data);
+    }
+    getUser();
+  });
+  return (
+    <>
+    </>
+  );
 };
 
 export default Example;
