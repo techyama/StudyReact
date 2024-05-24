@@ -8,7 +8,9 @@ export default function ArticleForm() {
   const [newTitle, setNewTitle] = useState();
 
   return (
-    <form>
+    // サーバーアクション(サーバー側で定義した関数を呼ぶ)
+    // actionを定義した場合にはmethod等を指定するとエラーになる
+    <form action={createItem}>
       <div>
         <label>
           {" "}
