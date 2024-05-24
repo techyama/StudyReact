@@ -6,8 +6,10 @@ export default function ArticleForm() {
   const [msg, setMsg] = useState()
 
   const onSubmit = (e) => {
+    // デフォルトのブラウザ制御を停止
     e.preventDefault();
     const form = e.target;
+    // formのデータを扱いやすくする
     const formData = new FormData(form);
     
     fetch('/api/article', { method: form.method, body: formData }).then((res) => {
@@ -17,6 +19,7 @@ export default function ArticleForm() {
       return res.json().then(data => {
         return `${data.id}:${data.title}の登録が完了しました。`
       })
+      // 直前のreturnで返した値がthenの引数に渡る
     }).then((msg) => {
       setMsg(msg)
     });
